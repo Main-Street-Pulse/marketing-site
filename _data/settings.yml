@@ -1,0 +1,58 @@
+basic_settings:
+  url: https://mainstreetpulse.com
+  title: Main Street Pulse
+  tagline: Your Ultimate Solution for Entity & Real Estate Tracking!
+  description: Main Street Pulse helps you keep track of all your business entities and properties in one convenient place. You can easily monitor your businesses, track your real estate holdings, and stay on top of important dates and milestones.
+  logo: logo.png
+  logo_width: 160
+  seo_image: main-street-pulse-banner.png
+  phone: 
+  author: 325 Studio
+  google_analytics: G-X42QB5MTMC
+  location: "Salt Lake City, Utah"
+  state: Utah
+  register: https://app.mainstreetpulse.com/register
+
+font_settings:
+  font_embed: "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Cormorant+Garamond:wght@400;500;600&display=swap" 
+  title_font: 'Cormorant Garamond'
+  body_font: 'Inter'
+
+# Custom Navbar Colors
+navbar_colors:
+  bg: "rgba(255, 255, 255, .96)"
+  menu_color: "#000000"
+  menu_hover_color: "#000000"
+  active_color: "#000000"
+  menu_color: "#000000"
+  brand_menu_color: "#000000"
+  brand_menu_hover_color: "#000000"
+
+# Background color for the call to action box
+cta:
+  bg: "linear-gradient(155deg, rgba(69,56,133,1) 0%, rgba(35,55,89,0.6) 100%);"
+
+# Background color for the form submission box 
+form: 
+  bg: "#229155"
+
+social_settings:
+  facebook_url: 'https://www.facebook.com/profile.php?id=61555991652828'
+  twitter_url: ''
+  instagram_url: 'https://www.instagram.com/mainstreetpulse/'
+  youtube_url: ''
+  github_url: ''
+  linkedin_url: 'https://www.linkedin.com/company/main-street-pulse/'
+
+# Local Business Schema
+schema:
+  type: SoftwareApplication
+  # name: Same as title above
+  alternateName: MSP
+  # image: Same as logo above
+  # telephone: Same as phone above
+  address:
+    addressRegion: "Utah"
+    addressCountry: "USA"
+  # url: Same as url above
+# End Schema

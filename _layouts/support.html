@@ -1,0 +1,34 @@
+{% include head.html %}
+  <body data-bs-spy="scroll" data-bs-target="#navScroll">
+  {% include nav.html %}
+  <main>
+    <div class="py-vh-5 mt-5 w-100 overflow-hidden">
+      <div class="container">
+        <div class="row d-flex justify-content-center">
+          <div class="col-12 col-lg-10 col-xl-8">
+            <a class="me-3 my-5 link-fancy" href="/support/">
+              <i class="bi bi-arrow-left"></i> Back to support
+            </a>
+            <h1 class="fw -bold ">{{ page.title }}</h1>
+            {% if page.categories %}
+            <p class="small">{{ page.categories }}</p>
+            {% endif %}
+            {{ content }}
+            <hr class="pt-3">
+            <nav class="post-navigation">
+              {% if page.previous %}
+                <a href="{{ page.previous.url }}" class="prev-post link-fancy" title="{{ page.previous.title }}"><i class="bi bi-arrow-left-short"></i> Previous: {{ page.previous.title }}</a>
+              {% endif %}
+              {% if page.next %}
+                <a href="{{ page.next.url }}" class="next-post link-fancy" title="{{ page.next.title }}">Next: {{ page.next.title }} <i class="bi bi-arrow-right-short"></i></a>
+              {% endif %}
+            </nav>
+    
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  {% include footer.html %}
+  </body>
+</html>

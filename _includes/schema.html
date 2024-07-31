@@ -1,0 +1,44 @@
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "{{ site.data.settings.basic_settings.title }}",
+    "alternateName": "{{ site.data.settings.schema.alternateName }}",
+    "description": "{{ site.data.settings.basic_settings.description }}",
+    "logo": "{{ site.data.settings.basic_settings.url }}/assets/images/{{ site.data.settings.basic_settings.logo }}",
+    "sameAs": [
+      "{{ site.data.settings.social_settings.facebook_url }}",
+      "{{ site.data.settings.social_settings.linkedin_url }}"
+    ],
+    "applicationCategory": "Real Estate",
+    "operatingSystem": "All modern browsers",
+    "offers": {
+      "@type": "Offer",
+      "price": "0.00",
+      "priceCurrency": "USD"
+    },
+    "softwareVersion": "1.0.0",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.5",
+      "reviewCount": "24"
+    },
+    "author": {
+      "@type": "Organization",
+      "name": "{{ site.data.settings.basic_settings.title }}"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "{{ site.data.settings.basic_settings.title }}"
+    },
+    "datePublished": "2024-07-04",
+    "downloadUrl": "https://app.mainstreetpulse.com/register",
+    "screenshot": "http://localhost:4000/assets/images/main-image.png",
+    "featureList": [
+      "Real Estate Organization",
+      "Business Entity Tracking",
+      "Store important documents and sharing information"
+    ],
+    "url": "{{ site.data.settings.basic_settings.url }}"
+  }
+  </script>

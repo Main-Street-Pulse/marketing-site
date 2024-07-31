@@ -1,0 +1,31 @@
+{% include head.html %}
+  <body data-bs-spy="scroll" data-bs-target="#navScroll">
+  {% include nav.html %}
+  <main>
+    <div class="w-100 overflow-hidden">
+      <div class="container-fluid bg-gray-100">
+        
+        <div class="container">
+          <div class="row d-flex justify-content-between align-items-center">
+            <div class="col-lg-6 py-vh-5">
+              <h1 class="display-3 fw-bold mt-5 pt-3">{{ page.title }}</h1>
+              <p class="lead">{{ page.description }}</p>
+              <a class="btn btn-primary btn-xl shadow me-1 my-1" href="https://app.mainstreetpulse.com/register" target="_blank">
+                Sign up for free
+              </a>
+            </div>
+            <div class="col-lg-6 py-vh-lg-5 mt-lg-5">
+              <img src="{{ site.url }}/assets/images/{{ page.image }}" alt="{{ page.title }}" class="img-fluid" >
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    {{ content }}
+    {% include cta.html %}
+  </main>
+  {% include footer.html %}
+  </body>
+</html>
+ 
