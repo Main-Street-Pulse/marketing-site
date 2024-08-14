@@ -11,3 +11,5 @@
     url: "/tracking/"
   - title: "Visualize"
     url: "/visualize/"
+  - title: "Documents"
+    url: "/documents/"
