@@ -4,14 +4,14 @@ title: "The Power of Sharing Information with Your Business Partner: A Path to S
 author: Tony Naccarato
 description: "Sharing information ensures that both parties are aligned, decisions are well-informed, and the business operates smoothly."
 category: Business
-image: /assets/articles/save-on-taxes.jpg
+image: /assets/articles/sharing-partners.png
 ---
-<h2>The Power of Sharing Information with Your Business Partner: A Path to Success</h2>
+<h2>Communication and collaboration with your business partner are critical in any business, especially in real estate and investment management.</h2> 
 
-Communication and collaboration with your business partner are critical in any business, especially in real estate and investment management. Sharing information ensures that both parties are aligned, decisions are well-informed, and the business operates smoothly. Yet, in the hustle of daily operations, it's easy for crucial details to fall through the cracks. 
+Sharing information ensures that both parties are aligned, decisions are well-informed, and the business operates smoothly. Yet, in the hustle of daily operations, it's easy for crucial details to fall through the cracks. 
 
 This is where the importance of consistently sharing information with your business partner becomes apparent. It's not just about keeping everyone in the loop—it's about building a solid foundation for your business's success. When you and your partners clearly understand the business's status, assets, and goals, you can work together more efficiently to grow and protect your investments.
-
+<p><img src="{{ page.image }}" alt="{{ page.description }}" class="img-fluid"></p>
 <h3>The Importance of Sharing Information</h3>
 
 Sharing information with your business partner is more than a formality—it's a strategic advantage. When both partners are well-informed, the business benefits in several ways:
