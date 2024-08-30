@@ -13,3 +13,5 @@
     url: "/visualize/"
   - title: "Documents"
     url: "/documents/"
+  - title: "Sharing"
+    url: "/sharing/"
