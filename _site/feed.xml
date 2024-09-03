@@ -5,8 +5,8 @@
     <description>Main Street Pulse helps you keep track of all your business entities and properties in one convenient place. You can easily monitor your businesses, track your real estate holdings, and stay on top of important dates and milestones.</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 30 Aug 2024 16:33:14 -0600</pubDate>
-    <lastBuildDate>Fri, 30 Aug 2024 16:33:14 -0600</lastBuildDate>
+    <pubDate>Fri, 30 Aug 2024 16:46:46 -0600</pubDate>
+    <lastBuildDate>Fri, 30 Aug 2024 16:46:46 -0600</lastBuildDate>
     <generator>Jekyll v4.3.2</generator>
     
       <item>
@@ -58,13 +58,13 @@
   &lt;li&gt;
 &lt;strong&gt;Stay Informed with Alerts and Updates:&lt;/strong&gt; MSP informs you and your partner with timely alerts and updates. MSP ensures you both have the latest information, whether it&apos;s a reminder for an upcoming board meeting or an update on a critical financial decision.
 &lt;/li&gt;
-&lt;ul&gt;
-In today&apos;s fast-paced business world, the success of a partnership hinges on effective communication and collaboration. By consistently sharing information and keeping each other informed, you and your partner can make better decisions, align your goals, and solve problems more efficiently.
+&lt;/ul&gt;
 
-Main Street Pulse is here to support that collaboration. With features like business and asset visualization, integrated document storage, and real-time updates, MSP ensures that you and your partner have everything you need to succeed. Whether you&apos;re tracking investments, managing assets, or planning for the future, MSP simplifies the process and keeps your partnership strong.
+&lt;p&gt;In today’s fast-paced business world, the success of a partnership hinges on effective communication and collaboration. By consistently sharing information and keeping each other informed, you and your partner can make better decisions, align your goals, and solve problems more efficiently.&lt;/p&gt;
 
-Don&apos;t let important details slip through the cracks. Start using Main Street Pulse today and experience how easy it can be to stay informed, aligned, and ahead of the game. With MSP, you can visualize your wealth, organize your assets, and focus on what truly matters—growing your business together.
-&lt;/ul&gt;&lt;/ul&gt;
+&lt;p&gt;Main Street Pulse is here to support that collaboration. With features like business and asset &lt;a href=&quot;https://mainstreetpulse.com/visualize/&quot;&gt;visualization&lt;/a&gt;, integrated &lt;a href=&quot;https://mainstreetpulse.com/documents/&quot;&gt;document storage&lt;/a&gt;, and &lt;a href=&quot;https://mainstreetpulse.com/tracking/&quot;&gt;monthly updates&lt;/a&gt;, MSP ensures that you and your partner have everything you need to succeed. Whether you’re tracking real estate, managing assets, or planning for the future, MSP simplifies the process and keeps your partnership strong.&lt;/p&gt;
+
+&lt;p&gt;Don’t let important details slip through the cracks. &lt;a href=&quot;https://app.mainstreetpulse.com/register&quot;&gt;Start using Main Street Pulse today&lt;/a&gt; and experience how easy it can be to stay informed, aligned, and ahead of the game. With MSP, you can visualize your wealth, organize your assets, and focus on what truly matters—growing your business together.&lt;/p&gt;
 </description>
         <pubDate>Fri, 30 Aug 2024 00:00:00 -0600</pubDate>
         <link>http://localhost:4000/articles/power-of-sharing-with-your-partner/</link>

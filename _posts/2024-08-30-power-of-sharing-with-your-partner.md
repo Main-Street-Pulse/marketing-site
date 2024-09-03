@@ -53,9 +53,10 @@ This is where Main Street Pulse (MSP) comes into play. MSP is designed to make s
   <li>
 <strong>Stay Informed with Alerts and Updates:</strong> MSP informs you and your partner with timely alerts and updates. MSP ensures you both have the latest information, whether it's a reminder for an upcoming board meeting or an update on a critical financial decision.
 </li>
-<ul>
+</ul>
+
 In today's fast-paced business world, the success of a partnership hinges on effective communication and collaboration. By consistently sharing information and keeping each other informed, you and your partner can make better decisions, align your goals, and solve problems more efficiently.
 
-Main Street Pulse is here to support that collaboration. With features like business and asset visualization, integrated document storage, and real-time updates, MSP ensures that you and your partner have everything you need to succeed. Whether you're tracking investments, managing assets, or planning for the future, MSP simplifies the process and keeps your partnership strong.
+Main Street Pulse is here to support that collaboration. With features like business and asset <a href="https://mainstreetpulse.com/visualize/">visualization</a>, integrated <a href="https://mainstreetpulse.com/documents/">document storage</a>, and <a href="https://mainstreetpulse.com/tracking/">monthly updates</a>, MSP ensures that you and your partner have everything you need to succeed. Whether you're tracking real estate, managing assets, or planning for the future, MSP simplifies the process and keeps your partnership strong.
 
-Don't let important details slip through the cracks. Start using Main Street Pulse today and experience how easy it can be to stay informed, aligned, and ahead of the game. With MSP, you can visualize your wealth, organize your assets, and focus on what truly matters—growing your business together.
+Don't let important details slip through the cracks. <a href="https://app.mainstreetpulse.com/register">Start using Main Street Pulse today</a> and experience how easy it can be to stay informed, aligned, and ahead of the game. With MSP, you can visualize your wealth, organize your assets, and focus on what truly matters&mdash;growing your business together.
