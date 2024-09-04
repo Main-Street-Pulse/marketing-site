@@ -4,14 +4,14 @@ title: "The Power of Sharing Information with Your Business Partner: A Path to S
 author: Tony Naccarato
 description: "Sharing information ensures that both parties are aligned, decisions are well-informed, and the business operates smoothly."
 category: Business
-image: /assets/articles/save-on-taxes.jpg
+image: /assets/articles/sharing-partners.png
 ---
-<h2>The Power of Sharing Information with Your Business Partner: A Path to Success</h2>
+<h2>Communication and collaboration with your business partner are critical in any business, especially in real estate and investment management.</h2> 
 
-Communication and collaboration with your business partner are critical in any business, especially in real estate and investment management. Sharing information ensures that both parties are aligned, decisions are well-informed, and the business operates smoothly. Yet, in the hustle of daily operations, it's easy for crucial details to fall through the cracks. 
+Sharing information ensures that both parties are aligned, decisions are well-informed, and the business operates smoothly. Yet, in the hustle of daily operations, it's easy for crucial details to fall through the cracks. 
 
 This is where the importance of consistently sharing information with your business partner becomes apparent. It's not just about keeping everyone in the loop—it's about building a solid foundation for your business's success. When you and your partners clearly understand the business's status, assets, and goals, you can work together more efficiently to grow and protect your investments.
-
+<p><img src="{{ page.image }}" alt="{{ page.description }}" class="img-fluid"></p>
 <h3>The Importance of Sharing Information</h3>
 
 Sharing information with your business partner is more than a formality—it's a strategic advantage. When both partners are well-informed, the business benefits in several ways:
@@ -53,9 +53,10 @@ This is where Main Street Pulse (MSP) comes into play. MSP is designed to make s
   <li>
 <strong>Stay Informed with Alerts and Updates:</strong> MSP informs you and your partner with timely alerts and updates. MSP ensures you both have the latest information, whether it's a reminder for an upcoming board meeting or an update on a critical financial decision.
 </li>
-<ul>
+</ul>
+
 In today's fast-paced business world, the success of a partnership hinges on effective communication and collaboration. By consistently sharing information and keeping each other informed, you and your partner can make better decisions, align your goals, and solve problems more efficiently.
 
-Main Street Pulse is here to support that collaboration. With features like business and asset visualization, integrated document storage, and real-time updates, MSP ensures that you and your partner have everything you need to succeed. Whether you're tracking investments, managing assets, or planning for the future, MSP simplifies the process and keeps your partnership strong.
+Main Street Pulse is here to support that collaboration. With features like business and asset <a href="https://mainstreetpulse.com/visualize/">visualization</a>, integrated <a href="https://mainstreetpulse.com/documents/">document storage</a>, and <a href="https://mainstreetpulse.com/tracking/">monthly updates</a>, MSP ensures that you and your partner have everything you need to succeed. Whether you're tracking real estate, managing assets, or planning for the future, MSP simplifies the process and keeps your partnership strong.
 
-Don't let important details slip through the cracks. Start using Main Street Pulse today and experience how easy it can be to stay informed, aligned, and ahead of the game. With MSP, you can visualize your wealth, organize your assets, and focus on what truly matters—growing your business together.
+Don't let important details slip through the cracks. <a href="https://app.mainstreetpulse.com/register">Start using Main Street Pulse today</a> and experience how easy it can be to stay informed, aligned, and ahead of the game. With MSP, you can visualize your wealth, organize your assets, and focus on what truly matters&mdash;growing your business together.
