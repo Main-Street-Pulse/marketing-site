@@ -15,3 +15,5 @@
     url: "/documents/"
   - title: "Sharing"
     url: "/sharing/"
+- title: "Articles"
+  url: "/articles/"
