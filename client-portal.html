@@ -108,9 +108,25 @@ image: track-dates.png
           <h2 class="display-6 mb-0 pt-3">Contact us and discover how Main Street Pulse can help you and your clients stay ahead in a complex financial landscape.</h2>
         </div>
         <div class="col-12">
-          <a class="btn btn-primary btn-xl shadow me-3 my-5 text-bold" href="#" rel="nofollow">
-            Contact us
-          </a>
+          
+          <form name="contact" netlify>
+            <div class="col-12">
+              <div class="mb-3">
+                <label for="FullName" class="form-label">Full Name</label>
+                <input type="text" name="name" class="form-control form-control-lg p-3" id="FullName">
+              </div>
+              <div class="mb-3">
+                <label for="EmailAddress" class="form-label">Email Address</label>
+                <input type="email" name="email" class="form-control form-control-lg p-3" id="EmailAddress" aria-describedby="emailHelp">
+              </div>
+              <div class="mb-3">
+                <label for="FullName" class="form-label">Your role or title</label>
+                <input type="text" name="name" class="form-control form-control-lg p-3" id="title">
+              </div>
+              <button type="submit" class="btn btn-custom-primary btn-xl">Submit</button>
+            </div>
+          </form>
+          
         </div>
       </div>
     </div>
