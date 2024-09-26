@@ -15,5 +15,7 @@
     url: "/documents/"
   - title: "Sharing"
     url: "/sharing/"
+  - title: "Client Portal"
+    url: "/client-portal/"
 - title: "Articles"
   url: "/articles/"
