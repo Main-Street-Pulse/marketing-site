@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "The Power of Sharing Information with Your Business Partner: A Path to Success"
+title: "The Power of Sharing Information with Your Business Partner"
 author: Tony Naccarato
 description: "Sharing information ensures that both parties are aligned, decisions are well-informed, and the business operates smoothly."
 category: Business

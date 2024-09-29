@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "How Converting Your LLC to an S-Corp Can Make a Difference"
+title: "Converting Your LLC to an S-Corp Can Make a Difference"
 author: Tony Naccarato
 description: "Boost Your Tax Savings by Converting Your LLC to an S-Corp"
 category: Business
