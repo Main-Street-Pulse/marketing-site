@@ -10,7 +10,7 @@ image: /assets/articles/family-estate-planning.jpg
 
 <h2>Key Takeaways:</h2>
 <ul>
-    <li>Seen the importance of estate planning as part of family legacy planning</li>
+    <li>See the importance of estate planning as part of family legacy planning</li>
     <li>Strategies to safeguard assets.</li>
     <li>Legal Considerations and Tax Efficient Planning Strategies for Entrepreneurs.</li>
     <li>Creating a source of truth for all your wealth and assets</li>
