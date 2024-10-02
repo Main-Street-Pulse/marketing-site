@@ -2,12 +2,10 @@
 layout: post
 title: "Managing Family Estate Planning"
 author: Tony Naccarato
-description: "
-Discover strategies for Family Estate Planning, including asset protection, wealth management, and tax efficiency. Protect your legacy with our expert guide."
+description: "Discover strategies for Family Estate Planning, including asset protection, wealth management, and tax efficiency. Protect your legacy with our expert guide."
 category: 'Family Estate Planning'
 image: /assets/articles/family-estate-planning.jpg
 ---
-<h1>Managing Family Estate Planning</h1>
 <p>Planning Your Family Estate Plans is essential to safeguarding wealth and family heritage according to your wishes. This guide offers strategies and solutions for effective estate planning that help manage assets, preserve family traditions, and ensure smooth asset distribution.</p>
 
 <h2>Key Takeaways:</h2>
