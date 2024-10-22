@@ -1,5 +1,5 @@
 ---
-title: Main Street Pulse Client Testimonials
+title: Client Testimonials
 description: Testimonials from Main Street Pulse clients.
 ---
 {% include head.html %}
@@ -31,6 +31,7 @@ description: Testimonials from Main Street Pulse clients.
                 <div class="card">
                   <!-- <img src="{{ post.image }}" class="card-img-top" alt="{{ post.description }}"> -->
                   <div class="card-body">
+                    <div>{{ post.video }}</div>
                     <h5 class="card-title h4"><a href="{{ post.url }}" class="text-decoration-none">{{ post.title }}</a></h5>
                     <p class="card-text">{{ post.description | truncate: 75 }}</p>
                     <a href="{{ post.url }}" class="link-fancy">Read more</a></a>
