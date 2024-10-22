@@ -3,12 +3,11 @@ layout: testimonials
 title: "Jim Anderson - Real Estate Investor"
 author: Main Street Pulse
 description: "Jim describes his experience with using Main Street Pulse with his partners."
-video: '<iframe width="100%" src="https://www.youtube.com/embed/MnhCcRwYTHo?si=M2NnX84QgCH7GWS4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'
+video: '<iframe width="100%" height="315" src="https://www.youtube.com/embed/MnhCcRwYTHo?si=M2NnX84QgCH7GWS4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'
 ---
-<h2>Jim describes his experience with using Main Street Pulse with his partners.</h2> 
+<h2>He shares his experience with using Main Street Pulse with his partners.</h2> 
 <p class="lead">Jim explains how the Visualize feature (Wealth Funnel) helps him and his partners understand their whole picture and strategy for their monthly meetings.</p>
-{{ post.video }}
-
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MnhCcRwYTHo?si=M2NnX84QgCH7GWS4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 <h3 class="mt-3">Transcript</h3>
 <p>Hi, my name is Jim Anderson, and I love using Main Street Pulse.</p>
 <p>For a while now, I've really been looking for a product that allowed me to take my properties that I own with some business partners of mine and load them up into a platform where I could really easily see all of them in one place.</p>
@@ -21,4 +20,4 @@ video: '<iframe width="100%" src="https://www.youtube.com/embed/MnhCcRwYTHo?si=M
 <p>So, really love the visualization feature that that offers me.</p>
 <p>I'm really excited for the additional features that are coming and I'm very happy as a Main Street Pulse user and excited for what's coming in the future.</p>
 <hr>
-<p>This is part of Main Street Pulse's user stories. It provides real examples of how real estate investors are using Main Street Pulse.</p>
+<p class="small">This is part of Main Street Pulse's user stories. It provides real examples of how real estate investors are using Main Street Pulse.</p>
