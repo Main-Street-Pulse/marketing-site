@@ -7,9 +7,9 @@ video: '<iframe width="100%" height="266" src="https://www.youtube.com/embed/Mnh
 ---
 <h2>He shares his experience with using Main Street Pulse with his partners.</h2> 
 <p class="lead">Jim explains how the Visualize feature (Wealth Funnel) helps him and his partners understand their whole picture and strategy for their monthly meetings.</p>
-
-{{ page.video }}
-
+<div class="w-50">
+  {{ page.video }}
+</div>
 <h3 class="mt-3">Transcript</h3>
 <p>Hi, my name is Jim Anderson, and I love using Main Street Pulse.</p>
 <p>For a while now, I've really been looking for a product that allowed me to take my properties that I own with some business partners of mine and load them up into a platform where I could really easily see all of them in one place.</p>
