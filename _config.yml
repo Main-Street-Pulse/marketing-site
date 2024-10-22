@@ -8,3 +8,6 @@ collections:
   support:
     output: true
     permalink: /support/:slug
+  testimonials:
+    output: true
+    permalink: /testimonials/:slug

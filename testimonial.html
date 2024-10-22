@@ -1,0 +1,54 @@
+
+---
+title: Main Street Pulse Client Testimonials
+description: Testimonials from Main Street Pulse clients.
+---
+{% include head.html %}
+  <body data-bs-spy="scroll" data-bs-target="#navScroll">
+  {% include nav.html %}
+  <main>
+    <div class="w-100 overflow-hidden">
+      <div class="container-fluid bg-gray-900 text-light ">
+        
+        <div class="container">
+          <div class="row d-flex justify-content-between align-items-center">
+            <div class="col-lg-12 py-vh-5">
+              <h1 class="display-3 fw-bold mt-5 pt-3">{{ page.title }}</h1>
+              <p class="lead">{{ page.description }}</p>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    <div class="py-vh-5 w-100 overflow-hidden">
+      <div class="container">
+        <div class="row d-flex justify-content-center">
+          <div class="col-lg-12">
+            <div class="row">
+              {% for post in site.testimonial %}
+            
+              <div class="col-sm-4">
+                <div class="card">
+                  <!-- <img src="{{ post.image }}" class="card-img-top" alt="{{ post.description }}"> -->
+                  <div class="card-body">
+                    <h5 class="card-title h4"><a href="{{ post.url }}" class="text-decoration-none">{{ post.title }}</a></h5>
+                    <p class="card-text">{{ post.description | truncate: 75 }}</p>
+                    <a href="{{ post.url }}" class="link-fancy">Read more</a></a>
+                  </div>
+                </div>
+              </div>
+            {% endfor %}
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  {% include footer.html %}
+  </body>
+</html>
+ 
+
+
+
