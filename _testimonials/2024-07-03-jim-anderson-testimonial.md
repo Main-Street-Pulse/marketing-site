@@ -1,5 +1,5 @@
 ---
-layout: testimonial
+layout: testimonials
 title: "Jim Anderson - Real Estate Investor"
 author: Main Street Pulse
 description: "Jim describes his experience with using Main Street Pulse and his partners."
