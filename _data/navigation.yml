@@ -19,3 +19,5 @@
     url: "/client-portal/"
 - title: "Articles"
   url: "/articles/"
+- title: "Testimonials"
+  url: "/testimonials/"
