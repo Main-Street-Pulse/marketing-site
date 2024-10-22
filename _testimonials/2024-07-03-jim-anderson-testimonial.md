@@ -3,7 +3,7 @@ layout: testimonials
 title: "Jim Anderson - Real Estate Investor"
 author: Main Street Pulse
 description: "Jim describes his experience with using Main Street Pulse with his partners."
-video: '<iframe width="100%" height="315" src="https://www.youtube.com/embed/MnhCcRwYTHo?si=M2NnX84QgCH7GWS4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'
+video: '<iframe width="100%" height="275" src="https://www.youtube.com/embed/MnhCcRwYTHo?si=M2NnX84QgCH7GWS4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'
 ---
 <h2>He shares his experience with using Main Street Pulse with his partners.</h2> 
 <p class="lead">Jim explains how the Visualize feature (Wealth Funnel) helps him and his partners understand their whole picture and strategy for their monthly meetings.</p>
