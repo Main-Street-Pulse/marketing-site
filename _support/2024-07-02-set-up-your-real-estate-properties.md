@@ -2,7 +2,7 @@
 layout: support
 title: "Set Up Your Real Estate Properties"
 author: Main Street Pulse
-description: "Learn how to set up your real estate properties."
+description: "Learn how to set up your real estate properties in Main Street Pulse."
 ---
 <p>Main Street Pulse can track your investment properties, primary residence, or both. You can track single-family, multi-family, land, commercial, and self-storage, to name a few.</p>
 <p>To start, navigate to the Real Estate page and click <strong>"Add new."</strong> Enter the property name and purchase date, as they are required.</p>

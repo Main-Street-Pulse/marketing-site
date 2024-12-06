@@ -2,7 +2,7 @@
 layout: post
 title: "Your Source of Truth for Real Estate and Business Entities"
 author: Tony Naccarato
-description: "Whether you're an individual investor, part of a partnership, or managing a family estate, having a single source of truth for all your real estate needs and business entities can make a difference."
+description: "Whether you're an individual, partnership, or managing a family estate, a single source of truth for all real estate and business entities can make a difference."
 category: Business
 image: /assets/articles/source-of-truth-wealth.jpg
 ---

@@ -2,7 +2,7 @@
 layout: support
 title: "Set Up Your Business Entities"
 author: Main Street Pulse
-description: "Learn how to set up your business entities."
+description: "Learn how to set up your business entities in Main Street Pulse."
 ---
 <p>Main Street Pulse can track your business entities, whether active or passive income businesses. The business entities that you can set up are:</p>
 <ul>
