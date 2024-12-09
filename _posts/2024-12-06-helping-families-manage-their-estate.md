@@ -4,7 +4,7 @@ title: "Helping Families and Individuals Manage Their Estate"
 author: Tony Naccarato
 description: "Main Street Pulse can help families and individuals manage their estate and wealth"
 category: 'Family Estate Planning'
-image: /assets/images/family-estate-managing.jpg
+image: /assets/articles/family-estate-managing.jpg
 ---
 <h2>Challenges in Managing Real Estate Holdings</h2>
 <p>Managing real estate holdings across the country presents a unique set of challenges. As families accumulate properties from the East Coast to the West Coast, the complexity of tracking information related to these assets increases significantly. This geographical spread can complicate management and oversight.</p>
