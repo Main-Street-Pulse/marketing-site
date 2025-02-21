@@ -17,6 +17,8 @@
     url: "/sharing/"
   - title: "Client Portal"
     url: "/client-portal/"
+  - title: "Security"
+    url: "/security/"
 - title: "Articles"
   url: "/articles/"
 - title: "Testimonials"
