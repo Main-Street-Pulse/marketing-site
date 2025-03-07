@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://mainstreetpulse.com/sitemap.xml
