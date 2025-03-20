@@ -12,12 +12,12 @@ events:
 - date: "01-31"
   title: "Mail forms 1099-NEC, 1099-MISC, 1099-DIV, 1099-INT & 1099-R"
   category: "taxes"
-  details: "Forms 1099-NEC, 1099-MISC, 1099-DIV, 1099-INT & 1099-R for 2023 must be issued to all payees by mail."
+  details: "Forms 1099-NEC, 1099-MISC, 1099-DIV, 1099-INT & 1099-R for previous year must be issued to all payees by mail."
 
 - date: "01-31"
-  title: "Employers must mail all 2023 W-2 forms to employees"
+  title: "Employers must mail all previous year W-2 forms to employees"
   category: "taxes"
-  details: "Employers must mail all 2023 W-2 forms to employees, and file all W-2's and form W-3 with the SSA."
+  details: "Employers must mail all previous year W-2 forms to employees, and file all W-2's and form W-3 with the SSA."
 
 - date: "01-31"
   title: "Last 4th quarter and year-end payroll tax reports due"
@@ -25,13 +25,13 @@ events:
   details: "All previous years payroll tax reports due for 4th quarter and year-end for the previouse year"
 
 - date: "01-31"
-  title: "All 2023 1099-NEC forms and 1096 due to the IRS"
-  category: "business"
-  details: "Deadline for businesses to mail or e-file all 2023 1099-NEC forms and 1096 to the IRS"
+  title: "All previous year 1099-NEC forms and 1096 due to the IRS"
+  category: "taxes"
+  details: "Deadline for businesses to mail or e-file all previous year 1099-NEC forms and 1096 to the IRS"
 
 - date: "02-15"
   title: "Forms 1099-MISC (with data in boxes 8 or 10), 1099-B and 1099-S must be issued to all payees by mail"
-  category: "business"
+  category: "taxes"
   details: "Forms 1099-MISC (with data in boxes 8 or 10), 1099-B and 1099-S must be issued to all payees by mail."
 
 - date: "02-15"
@@ -41,7 +41,7 @@ events:
 
 - date: "02-28"
   title: "Deadline for forms 1099-MISC, 1099-DIV, 1099-INT, 1099-R, 1099-B, 1099-S and 1096 to the IRS"
-  category: "business"
+  category: "taxes"
   details: "Deadline for businesses to 'mail' all previous years forms 1099-MISC, 1099-DIV, 1099-INT, 1099-R, 1099-B, 1099-S and 1096 to the IRS."
 
 - date: "03-01"
@@ -66,27 +66,27 @@ events:
 
 - date: "03-15"
   title: "Deadline to fund SEP IRA or Solo 401k in an LLC partnership or S-corp, unless extending"
-  category: "taxes"
+  category: "finance"
   details: ""
 
 - date: "03-15"
-  title: "Deadline for paying California 2023 gross receipts tax (form 568)"
-  category: "business"
+  title: "Deadline for paying California previous year gross receipts tax (form 568)"
+  category: "taxes"
   details: ""
 
 - date: "03-28"
   title: "Deadline for businesses to 'e-file' previous years form 1096 to the IRS"
-  category: "business"
+  category: "taxes"
   details: ""
 
 - date: "03-31"
-  title: "Deadline for businesses to 'e-file' all 2023 forms 1099-MISC, 1099-DIV, 1099-INT, 1099-R, 1099-B, and 1099-S to the IRS"
-  category: "business"
+  title: "Deadline for businesses to 'e-file' all previous year forms 1099-MISC, 1099-DIV, 1099-INT, 1099-R, 1099-B, and 1099-S to the IRS"
+  category: "taxes"
   details: ""
 
 - date: "04-01"
   title: "Deadline to take 1st IRA Required minimum Distribution (RMD)"
-  category: "business"
+  category: "finance"
   details: ""
 
 - date: "04-01"
@@ -105,63 +105,68 @@ events:
   details: ""
 
 - date: "04-15"
-  title: "individual 2023 1040 tax returns due or extension (form 4868)"
-  category: "business"
+  title: "Individual 1040 tax returns due for previous year or extension (form 4868)"
+  category: "taxes"
   details: ""
 
 - date: "04-15"
-  title: "c-corp 2023 1120 tax returns due or extension (form 7004)"
-  category: "business"
+  title: "C-Corp 1120 tax returns due for previous year or extension (form 7004)"
+  category: "taxes"
   details: ""
 
 - date: "04-15"
-  title: "estate & trust 2023 1041 tax returns due or extension (form 7004)"
-  category: "business"
+  title: "Estate & trust 1041 tax returns due for previous year or extension (form 7004)"
+  category: "taxes"
   details: ""
 
 - date: "04-15"
   title: "1st quarter 2024 estimated tax payment due"
+  category: "taxes"
+  details: ""
+
+- date: "04-15"
+  title: "Contributions to HSAs due for previous year"
+  category: "finance"
+  details: ""
+
+- date: "04-15"
+  title: "Contributions to previous year traditional, ROTH & coverdell IRAs due"
+  category: "finance"
+  details: ""
+
+- date: "04-15"
+  title: "Deadline to fund previous year sep IRA or Solo 401k for sole-props unless extending"
+  category: "finance"
+  details: ""
+
+- date: "04-15"
+  title: "Deadline for self-directed IRAs with UBIT or UDFI to file previous year 990t tax return unless extended (form 8868)"
+  category: "taxes"
+  details: ""
+
+- date: "04-15"
+  title: "Renewal due for New Mexico Corps"
   category: "business"
   details: ""
 
 - date: "04-15"
-  title: "contributions to hisas due for 2023"
+  title: "Renewals due for all MS, MT, NC, and KS entities"
   category: "business"
   details: ""
 
 - date: "04-15"
-  title: "contributions to 2023 traditional, roth & coverdell iras due deadline to fund 2023 sep ira or solo 401k for sole-props unless extending"
-  category: "business"
+  title: "Previous year franchise taxes due for California SMLLCs (form 568) & S-corps (form 100s)"
+  category: "taxes"
   details: ""
 
 - date: "04-15"
-  title: "deadline for self-directed iras with ubit or udfi to file 2023 990t tax return unless extended (form 8868)"
-  category: "business"
-  details: ""
-
-- date: "04-15"
-  title: "renewal due for new mexico corps"
-  category: "business"
-  details: ""
-
-- date: "04-15"
-  title: "renewals due for all ms, mt, nc, and ks entities"
-  category: "business"
-  details: ""
-
-- date: "04-15"
-  title: "2023 franchise taxes due for california smllc (form 568) & s-corps (form 100s)"
-  category: "business"
-  details: ""
-
-- date: "04-15"
-  title: "tennessee franchise tax due or fonce exemption certificate (form fae 183)"
-  category: "business"
+  title: "Tennessee franchise tax due or fonce exemption certificate (form FAE 183)"
+  category: "taxes"
   details: ""
 
 - date: "04-30"
   title: "S-corp 1st quarter payroll reports due"
-  category: "business"
+  category: "taxes"
   details: ""
 
 - date: "05-01"
@@ -176,27 +181,27 @@ events:
 
 - date: "05-15"
   title: "Non-profit tax return or Form 990 or Form 990EZ"
-  category: "business"
+  category: "taxes"
   details: ""
 
-- date: "06-01"
+- date: "06-03"
   title: "Renewal due for all Deleware LLCs"
   category: "business"
   details: ""
 
-- date: "06-01"
+- date: "06-03"
   title: "Renewal due for all Maine entities"
   category: "business"
   details: ""
 
-- date: "06-02"
+- date: "06-17"
   title: "2nd quarter estimated tax payment due"
-  category: "business"
+  category: "taxes"
   details: ""
 
-- date: "06-02"
+- date: "06-17"
   title: "Deadline for paying estimated California LLC prior year gross receipts tax (not franchise tax Form 3536)"
-  category: "business"
+  category: "taxes"
   details: ""
 
 - date: "06-28"
@@ -211,12 +216,12 @@ events:
 
 - date: "07-31"
   title: "2 quarter payroll reports due for S-Corp owners"
-  category: "business"
+  category: "taxes"
   details: ""
 
 - date: "07-31"
   title: "Deadline for Solo 401ks with more than $250k in assets to file 5500EZ tax return"
-  category: "business"
+  category: "taxes"
   details: ""
 
 - date: "08-01"
@@ -226,27 +231,27 @@ events:
 
 - date: "09-16"
   title: "3rd quarter estimated tax payment due"
-  category: "business"
+  category: "taxes"
   details: ""
 
 - date: "09-16"
-  title: "S-Corp 11205 tax returns due if extended"
-  category: "business"
+  title: "S-Corp 1120S tax returns due if extended"
+  category: "taxes"
   details: ""
 
 - date: "09-16"
   title: "LLC partnership 1065 tax returns due if extended"
-  category: "business"
+  category: "taxes"
   details: ""
 
 - date: "09-16"
   title: "Deadline to fund prior year SEP or Solo 401k if S-Corp or Partnership was extended"
-  category: "business"
+  category: "finance"
   details: ""
 
 - date: "09-30"
   title: "Estate & Trust 1041 tax returns due if extended"
-  category: "business"
+  category: "taxes"
   details: ""
 
 - date: "10-15"
@@ -256,22 +261,22 @@ events:
 
 - date: "10-15"
   title: "C-Corp 1120 for prior year tax returns due if extended"
-  category: "business"
+  category: "taxes"
   details: ""
 
 - date: "10-15"
   title: "Prior year contributions due for SEPs or 401ks adopted by SMLLCs or Sole Proprietorship"
-  category: "business"
+  category: "finance"
   details: ""
 
 - date: "10-15"
   title: "Deadline for Solo 401ks with more than $250k in assets to file 5500EZ tax return if extended (form 5558)"
-  category: "business"
+  category: "taxes"
   details: ""
 
 - date: "10-15"
-  title: "deadline for self-directed iras with ubit or udfi to file 2023 990t tax return if extended"
-  category: "business"
+  title: "Deadline for self-directed IRAs with UBIT or UDFI to file previous year 990t tax return if extended"
+  category: "taxes"
   details: ""
 
 - date: "10-31"
@@ -281,7 +286,7 @@ events:
 
 - date: "10-31"
   title: "3rd quarter payroll reports due"
-  category: "business"
+  category: "taxes"
   details: ""
 
 - date: "11-01"
