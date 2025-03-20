@@ -23,3 +23,5 @@
   url: "/articles/"
 - title: "Testimonials"
   url: "/testimonials/"
+- title: "Tools"
+  url: "/tools/"

@@ -1,0 +1,69 @@
+---
+layout: page-2
+title: Tax & Legal Deadlines
+description: Important Tax & Legal Dates so you can remember what deadlines are coming up.
+---
+    <div class="container">
+      <div class="calendar-header">
+        <a href="/event-calendar/" class="btn btn-outline-dark">Calendar View</a>
+      </div>
+      <div class="event-list" id="eventList"></div>
+    </div>
+
+    <!-- Event Details Modal -->
+    <div class="modal fade" id="eventModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="eventTitle"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body" id="eventDetails"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+          const eventList = document.getElementById('eventList');
+          const events = {{ site.data.events.events | sort: "date" | jsonify }};
+
+          function renderEventList() {
+              eventList.innerHTML = '';
+              let currentMonth = '';
+
+              events.forEach(event => {
+                  const eventDate = new Date(event.date);
+                  const formattedDate = eventDate.toLocaleDateString('en-US', { month: '2-digit', day: '2-digit' });
+                  const monthLabel = eventDate.toLocaleString('default', { month: 'long', year: 'numeric' });
+
+                  if (monthLabel !== currentMonth) {
+                      currentMonth = monthLabel;
+                      const monthHeader = document.createElement('div');
+                      monthHeader.classList.add('month-header');
+                      monthHeader.textContent = currentMonth;
+                      eventList.appendChild(monthHeader);
+                  }
+
+                  const eventItem = document.createElement('div');
+                  eventItem.classList.add('event-item');
+                  eventItem.innerHTML = `
+                    <div class="d-flex justify-content-between align-items-center">  
+                      <strong>${formattedDate} - ${event.title}</strong>
+                      <div class="ms-4 badge rounded-pill category-${event.category}">${event.category}</div>
+                    </div>
+                  `;
+                  eventItem.onclick = () => showEventDetails(event);
+                  eventList.appendChild(eventItem);
+              });
+          }
+
+          function showEventDetails(event) {
+              document.getElementById('eventTitle').textContent = event.title;
+              document.getElementById('eventDetails').textContent = event.details;
+              new bootstrap.Modal(document.getElementById('eventModal')).show();
+          }
+
+          renderEventList();
+      });
+  </script>

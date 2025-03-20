@@ -10034,3 +10034,30 @@ img {
   justify-content: space-between;
   margin-top: 20px;
 }
+
+/* Calendar Styles */
+.calendar { margin: 0px auto; }
+.calendar-header { display: flex; justify-content: space-between; align-items: center; padding: 10px; }
+.calendar-days { display: grid; grid-template-columns: repeat(7, 1fr); text-align: center; }
+.day { padding: 4px; border: 1px solid #ddd; height: 160px; overflow-y: auto; position: relative; font-size: .8em; line-height: 1.2em;}
+.today { background-color: #ffeb3b; border: 2px solid #fbc02d; }
+.event { cursor: pointer; padding: 2px; border-radius: 4px; color: #fff; margin-top: 2px; }
+.event.business { background-color: #007bff; }
+.event.taxes { background-color: #28a745; }
+.event.finance { background-color: #ffc107; }
+
+.list-view { display: none; }
+.list-view.active { display: block; }
+.calendar-view { display: block; }
+.calendar-view.hidden { display: none; }
+
+@media (max-width: 600px) {
+    .calendar-header { flex-direction: column; gap: 10px; }
+    .calendar-days { grid-template-columns: repeat(7, minmax(30px, 1fr)); }
+    .day { height: 120px; padding: 2px; }
+}
+
+.event-list { max-width: 800px; margin: 50px auto; }
+.event-item { cursor: pointer; border-bottom: 1px solid #ddd; padding: 10px 0; }
+.event-item:hover { background-color: #f8f9fa; }
+.month-header { background-color: #212529; color: #fff; padding: 8px 12px; margin-top: 20px; border-radius: 1px; }
