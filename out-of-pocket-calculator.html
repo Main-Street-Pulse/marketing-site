@@ -1,0 +1,78 @@
+---
+layout: page-2
+title: Total Out-of-Pocket Calculator
+description: Calculate the total initial investment needed for your real estate purchase, including down payment, closing costs, and any additional fees.
+
+
+---
+<script>
+  function formatNumber(num) {
+      return num.toLocaleString();
+  }
+  
+  function calculateCosts() {
+      let homePriceInput = document.getElementById("homePrice");
+      let homePrice = parseFloat(homePriceInput.value.replace(/,/g, "")) || 0;
+      homePriceInput.value = formatNumber(homePrice);
+      
+      let downPaymentPercent = parseFloat(document.getElementById("downPayment").value) || 0;
+      let rehabFeesInput = document.getElementById("rehabFees");
+      let rehabFees = parseFloat(rehabFeesInput.value.replace(/,/g, "")) || 0;
+      rehabFeesInput.value = formatNumber(rehabFees);
+      
+      let downPayment = (downPaymentPercent / 100) * homePrice;
+      let closingCosts = 0.05 * homePrice;
+      let totalOutOfPocket = downPayment + closingCosts + rehabFees;
+      
+      document.getElementById("downPaymentLabel").innerText = `Down Payment (${downPaymentPercent}%)`;
+      document.getElementById("downPaymentValue").innerText = `$${formatNumber(downPayment)}`;
+      document.getElementById("closingCosts").innerText = `$${formatNumber(closingCosts)}`;
+      document.getElementById("totalOutOfPocket").innerText = `$${formatNumber(totalOutOfPocket)}`;
+  }
+  
+  window.onload = function() {
+      document.getElementById("homePrice").value = formatNumber(275000);
+      document.getElementById("downPayment").value = 25;
+      document.getElementById("downPaymentLabel").innerText = "Down Payment (25%)";
+      document.getElementById("rehabFees").value = 0;
+      calculateCosts();
+  };
+</script>
+<div class="w-100 overflow-hidden">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <div class="card">
+          <div class="card-body p-5">
+            <div class="mb-3">
+              <label for="homePrice" class="form-label"><strong>Home Price ($)</strong></label>
+              <input type="text" id="homePrice" class="form-control" oninput="calculateCosts()">
+            </div>
+            <div class="mb-3">
+                <label for="downPayment" id="downPaymentLabel" class="form-label"><strong>Down Payment (25%)</strong></label>
+                <input type="range" id="downPayment" class="form-range" min="0" max="100" step="1" value="25" oninput="calculateCosts()">
+            </div>
+            <hr>
+            <div class="mb-3 d-flex justify-content-between">
+                <strong>Down Payment:</strong> <span id="downPaymentValue">$0</span>
+            </div>
+            <div class="mb-3 d-flex justify-content-between">
+              <strong>Closing Costs (5%):</strong>                
+              <span id="closingCosts">$0</span>
+            </div>
+            <div class="mb-3 d-flex justify-content-between">
+                <label for="rehabFees" class="form-label"><strong>Rehab or Additional Fees ($)</strong></label>
+                <input type="text" id="rehabFees" class="form-control w-25 text-end" value="0" oninput="calculateCosts()">
+            </div>
+            <hr>
+            <div class="mb-3 d-flex justify-content-between lead">
+                <strong>Total Out-of-Pocket:</strong> <span id="totalOutOfPocket">$0</span>
+            </div>
+            <p>Note: This calculator provides an estimate of your total initial investment. Actual costs may vary based on specific circumstances and market conditions.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% include disclaimer.html %}
