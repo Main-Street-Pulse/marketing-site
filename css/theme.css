@@ -10062,4 +10062,4 @@ img {
 .event-list { max-width: 800px; margin: 50px auto; }
 .event-item { cursor: pointer; border-bottom: 1px solid #ddd; padding: 10px 0; }
 .event-item:hover { background-color: #f8f9fa; }
-.month-header { background-color: #212529; color: #fff; padding: 8px 12px; margin-top: 20px; border-radius: 1px; }
+.month-header { background-color: #212529; color: #fff; padding: 8px 12px; margin-top: 20px; border-radius: 1px; font-size: 1.2em;}
