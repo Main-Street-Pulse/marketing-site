@@ -5,19 +5,19 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
   <meta name="theme-color" content="#ffffff">
   <meta name="HandheldFriendly" content="true">
-  <meta name="description" content="Important Tax & Legal Dates so you can remember what deadlines are coming up.">
-  <title>Tax & Legal Deadlines | Main Street Pulse</title>
+  <meta name="description" content="Calculate your monthly mortgage payments, view amortization schedules, and understand the total cost of your loan.">
+  <title>Mortgage Calculator | Main Street Pulse</title>
   <meta name="author" content="325 Studio">
-  <meta property="og:title" content="Tax & Legal Deadlines | Main Street Pulse">
+  <meta property="og:title" content="Mortgage Calculator | Main Street Pulse">
   <meta property="og:locale" content="en_US">
-  <meta property="og:description" content="Important Tax & Legal Dates so you can remember what deadlines are coming up.">
-  <meta property="og:url" content="http://localhost:4000/event-list/">
-  <meta property="og:site_name" content="Tax & Legal Deadlines | Main Street Pulse">
+  <meta property="og:description" content="Calculate your monthly mortgage payments, view amortization schedules, and understand the total cost of your loan.">
+  <meta property="og:url" content="http://localhost:4000/mortgage-calculator/">
+  <meta property="og:site_name" content="Mortgage Calculator | Main Street Pulse">
   <meta property="og:image" content="http://localhost:4000/assets/images/">
   <meta property="og:type" content="SoftwareApplication">
-  <meta name="twitter:card" content="Important Tax & Legal Dates so you can remember what deadlines are coming up.">
+  <meta name="twitter:card" content="Calculate your monthly mortgage payments, view amortization schedules, and understand the total cost of your loan.">
   <meta property="twitter:image" content="http://localhost:4000/assets/images/">
-  <meta property="twitter:title" content="Tax & Legal Deadlines | Main Street Pulse">
+  <meta property="twitter:title" content="Mortgage Calculator | Main Street Pulse">
   <link rel="apple-touch-icon" sizes="180x180" href="http://localhost:4000/assets/icons/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="http://localhost:4000/assets/icons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:4000/assets/icons/favicon-16x16.png">
@@ -78,7 +78,7 @@
     "url": "https://mainstreetpulse.com"
   }
   </script>
-  <link rel="canonical" href="http://localhost:4000/event-list/">
+  <link rel="canonical" href="http://localhost:4000/mortgage-calculator/">
   <link rel="stylesheet" href="http://localhost:4000/css/theme.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -233,11 +233,11 @@
                 <ol class="breadcrumb">
                   <li class="breadcrumb-item"><a href="#">Home</a></li>
                   <li class="breadcrumb-item"><a href="/tools/">Tools</a></li>
-                  <li class="breadcrumb-item active" aria-current="page">Tax & Legal Deadlines</li>
+                  <li class="breadcrumb-item active" aria-current="page">Mortgage Calculator</li>
                 </ol>
               </nav>
-              <h1 class="display-6 pt-3">Tax & Legal Deadlines</h1>
-              <p>Important Tax & Legal Dates so you can remember what deadlines are coming up.</p>
+              <h1 class="display-6 pt-3">Mortgage Calculator</h1>
+              <p>Calculate your monthly mortgage payments, view amortization schedules, and understand the total cost of your loan.</p>
               
             </div>
           </div>
@@ -245,70 +245,138 @@
         
       </div>
     </div>
-        <div class="container">
-      <div class="calendar-header">
-        <a href="/event-calendar/" class="btn btn-outline-dark">Calendar View</a>
-      </div>
-      <div class="event-list" id="eventList"></div>
-    </div>
-
-    <!-- Event Details Modal -->
-    <div class="modal fade" id="eventModal" tabindex="-1">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="eventTitle"></h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<div class="container mt-4">     
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card p-3 equal-height">
+                    <h5 class="card-title">Loan Amount</h5>
+                    <label for="loanAmount" class="form-label">Enter Loan Amount ($)</label>
+                    <input type="text" id="loanAmount" class="form-control" value="250,000" oninput="formatAndCalculate()">
                 </div>
-                <div class="modal-body" id="eventDetails"></div>
             </div>
+            <div class="col-md-3">
+                <div class="card p-3 equal-height">
+                    <h5 class="card-title">Interest Rate</h5>
+                    <label for="interestRate" class="form-label">Enter Annual Rate (%)</label>
+                    <input type="number" id="interestRate" class="form-control" value="6.5" oninput="calculateMortgage()">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card p-3 equal-height">
+                    <h5 class="card-title">Loan Term</h5>
+                    <label for="loanTerm" class="form-label">Years (1-50)</label>
+                    <input type="number" id="loanTerm" class="form-control" value="30" oninput="calculateMortgage()">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card p-3 equal-height d-flex flex-column">
+                    <h5 class="card-title">Monthly Payment</h5>
+                    <h4 class="text-success" id="monthlyPayment">$0</h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="card p-3 mt-4">
+            <h4>Amortization Schedule</h4>
+            <div style="max-height: 300px; overflow-y: auto;">
+                <table class="table table-striped mt-2">
+                    <thead>
+                        <tr>
+                            <th>Month</th>
+                            <th>Payment</th>
+                            <th>Interest</th>
+                            <th>Principal</th>
+                            <th>Balance</th>
+                        </tr>
+                    </thead>
+                    <tbody id="amortizationTable"></tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="card p-3 mt-4">
+            <h4>Principal vs Interest Over Time</h4>
+            <canvas id="paymentChart"></canvas>
         </div>
     </div>
 
     <script>
-      document.addEventListener('DOMContentLoaded', function () {
-          const eventList = document.getElementById('eventList');
-          const events = [{"date":"01-02","title":"Renewal due for Alaska Entities","category":"business","details":""},{"date":"01-16","title":"4th quarter estimated tax payment due","category":"taxes","details":""},{"date":"01-31","title":"Employers must mail all previous year W-2 forms to employees","category":"taxes","details":"Employers must mail all previous year W-2 forms to employees, and file all W-2's and form W-3 with the SSA."},{"date":"01-31","title":"All previous year 1099-NEC forms and 1096 due to the IRS","category":"taxes","details":"Deadline for businesses to mail or e-file all previous year 1099-NEC forms and 1096 to the IRS"},{"date":"01-31","title":"Last 4th quarter and year-end payroll tax reports due","category":"taxes","details":"All previous years payroll tax reports due for 4th quarter and year-end for the previouse year"},{"date":"01-31","title":"Mail forms 1099-NEC, 1099-MISC, 1099-DIV, 1099-INT & 1099-R","category":"taxes","details":"Forms 1099-NEC, 1099-MISC, 1099-DIV, 1099-INT & 1099-R for previous year must be issued to all payees by mail."},{"date":"02-15","title":"Forms 1099-MISC (with data in boxes 8 or 10), 1099-B and 1099-S must be issued to all payees by mail","category":"taxes","details":"Forms 1099-MISC (with data in boxes 8 or 10), 1099-B and 1099-S must be issued to all payees by mail."},{"date":"02-15","title":"Renewal due for Michigan LLCs","category":"business","details":"Renewal due for Michigan LLCs"},{"date":"02-28","title":"Deadline for forms 1099-MISC, 1099-DIV, 1099-INT, 1099-R, 1099-B, 1099-S and 1096 to the IRS","category":"taxes","details":"Deadline for businesses to 'mail' all previous years forms 1099-MISC, 1099-DIV, 1099-INT, 1099-R, 1099-B, 1099-S and 1096 to the IRS."},{"date":"03-01","title":"Entity renewals for Nebraska LLCs","category":"business","details":"Entity renewals for Nebraska LLCs."},{"date":"03-01","title":"Entity renewals for Delaware, Nebraska, and Rhode Island Corps","category":"business","details":"Entity renewals for Delaware, Nebraska, and Rhode Island Corps."},{"date":"03-15","title":"S-corp 1120s tax returns due or extension (form 7004)","category":"taxes","details":""},{"date":"03-15","title":"LLC partnership 1065 tax returns due or extension(form 7004)","category":"taxes","details":""},{"date":"03-15","title":"Deadline to fund SEP IRA or Solo 401k in an LLC partnership or S-corp, unless extending","category":"finance","details":""},{"date":"03-15","title":"Deadline for paying California previous year gross receipts tax (form 568)","category":"taxes","details":""},{"date":"03-28","title":"Deadline for businesses to 'e-file' previous years form 1096 to the IRS","category":"taxes","details":""},{"date":"03-31","title":"Deadline for businesses to 'e-file' all previous year forms 1099-MISC, 1099-DIV, 1099-INT, 1099-R, 1099-B, and 1099-S to the IRS","category":"taxes","details":""},{"date":"04-01","title":"Deadline to take 1st IRA Required minimum Distribution (RMD)","category":"finance","details":""},{"date":"04-01","title":"Entity renewal of Iowa and Vermont LLCs and Corps","category":"business","details":""},{"date":"04-01","title":"Entity renewal due for all Connecticut and Wisconsin Entities (Foreigns only)","category":"business","details":""},{"date":"04-01","title":"Entity renewal due for all Georgia, New Hamshire, Tennesse, and DC entities","category":"business","details":""},{"date":"04-15","title":"C-Corp 1120 tax returns due for previous year or extension (form 7004)","category":"taxes","details":""},{"date":"04-15","title":"Individual 1040 tax returns due for previous year or extension (form 4868)","category":"taxes","details":""},{"date":"04-15","title":"Estate & trust 1041 tax returns due for previous year or extension (form 7004)","category":"taxes","details":""},{"date":"04-15","title":"1st quarter 2024 estimated tax payment due","category":"taxes","details":""},{"date":"04-15","title":"Contributions to HSAs due for previous year","category":"finance","details":""},{"date":"04-15","title":"Contributions to previous year traditional, ROTH & coverdell IRAs due","category":"finance","details":""},{"date":"04-15","title":"Deadline to fund previous year sep IRA or Solo 401k for sole-props unless extending","category":"finance","details":""},{"date":"04-15","title":"Deadline for self-directed IRAs with UBIT or UDFI to file previous year 990t tax return unless extended (form 8868)","category":"taxes","details":""},{"date":"04-15","title":"Renewal due for New Mexico Corps","category":"business","details":""},{"date":"04-15","title":"Renewals due for all MS, MT, NC, and KS entities","category":"business","details":""},{"date":"04-15","title":"Previous year franchise taxes due for California SMLLCs (form 568) & S-corps (form 100s)","category":"taxes","details":""},{"date":"04-15","title":"Tennessee franchise tax due or fonce exemption certificate (form FAE 183)","category":"taxes","details":""},{"date":"04-30","title":"S-corp 1st quarter payroll reports due","category":"taxes","details":""},{"date":"05-01","title":"Renewal due for all Florida entities","category":"business","details":""},{"date":"05-12","title":"Renewal due for all Michigan Corps","category":"business","details":""},{"date":"05-15","title":"Non-profit tax return or Form 990 or Form 990EZ","category":"taxes","details":""},{"date":"06-03","title":"Renewal due for all Deleware LLCs","category":"business","details":""},{"date":"06-03","title":"Renewal due for all Maine entities","category":"business","details":""},{"date":"06-17","title":"2nd quarter estimated tax payment due","category":"taxes","details":""},{"date":"06-17","title":"Deadline for paying estimated California LLC prior year gross receipts tax (not franchise tax Form 3536)","category":"taxes","details":""},{"date":"06-28","title":"Renewal due for all Kentucky entities","category":"business","details":""},{"date":"07-01","title":"Renewal due for all West Virginia entities","category":"business","details":""},{"date":"07-31","title":"2 quarter payroll reports due for S-Corp owners","category":"taxes","details":""},{"date":"07-31","title":"Deadline for Solo 401ks with more than $250k in assets to file 5500EZ tax return","category":"taxes","details":""},{"date":"08-01","title":"Renewal due for all North Dakota entities","category":"business","details":""},{"date":"09-16","title":"3rd quarter estimated tax payment due","category":"taxes","details":""},{"date":"09-16","title":"S-Corp 1120S tax returns due if extended","category":"taxes","details":""},{"date":"09-16","title":"LLC partnership 1065 tax returns due if extended","category":"taxes","details":""},{"date":"09-16","title":"Deadline to fund prior year SEP or Solo 401k if S-Corp or Partnership was extended","category":"finance","details":""},{"date":"09-30","title":"Estate & Trust 1041 tax returns due if extended","category":"taxes","details":""},{"date":"10-15","title":"Individual 1040 tax returns due for prior year if extended","category":"business","details":""},{"date":"10-15","title":"C-Corp 1120 for prior year tax returns due if extended","category":"taxes","details":""},{"date":"10-15","title":"Prior year contributions due for SEPs or 401ks adopted by SMLLCs or Sole Proprietorship","category":"finance","details":""},{"date":"10-15","title":"Deadline for self-directed IRAs with UBIT or UDFI to file previous year 990t tax return if extended","category":"taxes","details":""},{"date":"10-15","title":"Deadline for Solo 401ks with more than $250k in assets to file 5500EZ tax return if extended (form 5558)","category":"taxes","details":""},{"date":"10-31","title":"Renewal due for all Rhode Island LLCs","category":"business","details":""},{"date":"10-31","title":"3rd quarter payroll reports due","category":"taxes","details":""},{"date":"11-01","title":"Renewal due for all North Dakota LLCs","category":"business","details":""}];
+        function formatNumber(num) {
+            return num.toLocaleString("en-US", { maximumFractionDigits: 0 });
+        }
 
-          function renderEventList() {
-              eventList.innerHTML = '';
-              let currentMonth = '';
+        function formatAndCalculate() {
+            let input = document.getElementById("loanAmount");
+            let num = input.value.replace(/,/g, "");
+            if (!isNaN(num) && num !== "") {
+                input.value = formatNumber(parseInt(num));
+                calculateMortgage();
+            }
+        }
 
-              events.forEach(event => {
-                  const eventDate = new Date(event.date);
-                  const formattedDate = eventDate.toLocaleDateString('en-US', { month: '2-digit', day: '2-digit' });
-                  const monthLabel = eventDate.toLocaleString('default', { month: 'long' });
+        function calculateMortgage() {
+            let P = parseFloat(document.getElementById("loanAmount").value.replace(/,/g, ""));
+            let r = parseFloat(document.getElementById("interestRate").value) / 100 / 12;
+            let n = parseInt(document.getElementById("loanTerm").value) * 12;
+            
+            let M = Math.ceil((P * r) / (1 - Math.pow(1 + r, -n)));
+            document.getElementById("monthlyPayment").textContent = "$" + formatNumber(M);
+            
+            let balance = P;
+            let tableHTML = "";
+            let principalPaid = [];
+            let interestPaid = [];
+            let labels = [];
+            
+            for (let i = 1; i <= n; i++) {
+                let interest = Math.ceil(balance * r);
+                let principal = Math.ceil(M - interest);
+                balance -= principal;
+                
+                tableHTML += `<tr><td>${i}</td><td>$${formatNumber(M)}</td><td>$${formatNumber(interest)}</td><td>$${formatNumber(principal)}</td><td>$${formatNumber(balance)}</td></tr>`;
+                
+                if (i % 12 === 0) {
+                    labels.push(i / 12);
+                    principalPaid.push(P - balance);
+                    interestPaid.push((M * i) - (P - balance));
+                }
+            }
+            
+            document.getElementById("amortizationTable").innerHTML = tableHTML;
+            
+            let ctx = document.getElementById("paymentChart").getContext("2d");
+            new Chart(ctx, {
+                type: "line",
+                data: {
+                    labels: labels,
+                    datasets: [
+                        {
+                            label: "Principal Paid",
+                            data: principalPaid,
+                            borderColor: "orange",
+                            fill: false
+                        },
+                        {
+                            label: "Interest Paid",
+                            data: interestPaid,
+                            borderColor: "gray",
+                            fill: false
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        x: { title: { display: true, text: "Years" } },
+                        y: { title: { display: true, text: "$ Amount" } }
+                    }
+                }
+            });
+        }
 
-                  if (monthLabel !== currentMonth) {
-                      currentMonth = monthLabel;
-                      const monthHeader = document.createElement('div');
-                      monthHeader.classList.add('month-header');
-                      monthHeader.textContent = currentMonth;
-                      eventList.appendChild(monthHeader);
-                  }
-
-                  const eventItem = document.createElement('div');
-                  eventItem.classList.add('event-item');
-                  eventItem.innerHTML = `
-                    <div class="d-flex justify-content-between align-items-center">  
-                      <strong>${formattedDate} - ${event.title}</strong>
-                      <div class="ms-4 badge rounded-pill category-${event.category}">${event.category}</div>
-                    </div>
-                  `;
-                  eventItem.onclick = () => showEventDetails(event);
-                  eventList.appendChild(eventItem);
-              });
-          }
-
-          function showEventDetails(event) {
-              document.getElementById('eventTitle').textContent = event.title;
-              document.getElementById('eventDetails').textContent = event.details;
-              new bootstrap.Modal(document.getElementById('eventModal')).show();
-          }
-
-          renderEventList();
-      });
-  </script>
+        document.addEventListener("DOMContentLoaded", calculateMortgage);
+    </script>
     <div class="py-vh-3 w-100 overflow-hidden" id="workwithus">
   <div class="container">
     <p class="small"><strong>Disclaimer</strong></p>
