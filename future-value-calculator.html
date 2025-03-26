@@ -1,0 +1,164 @@
+---
+layout: tools
+title: Future Value Calculator
+description: This Future Value Calculator helps you visualize how your investments might grow over time, whether in real estate or other vehicles.
+---
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<div class="container mt-5">        
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card p-4 mb-3">
+                <h3 class="mb-4">Investment Details</h3>
+                <label>Initial Investment ($)</label>
+                <input type="text" id="initialInvestment" class="form-control" value="100,000" oninput="formatNumber(this); calculateGrowth()">
+                
+                <label class="mt-3">Annual Contribution ($)</label>
+                <input type="text" id="annualContribution" class="form-control" placeholder="Enter annual contributions" oninput="formatNumber(this); calculateGrowth()">
+                
+                <label class="mt-3">Time Horizon (Years): <span id="timeHorizonValue">30</span> years</label>
+                <input type="range" id="timeHorizon" class="form-range" min="1" max="100" value="30" oninput="updateTime()">
+            </div>
+            
+            <div class="card p-3">
+                <h3 class="mb-4">Investment Scenarios</h3>
+                <div id="scenarios"></div>
+                <button class="btn btn-light mt-2" onclick="addScenario()"><i class="bi bi-plus"></i> Add Scenario</button>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div id="scenarioCards" class="d-flex flex-wrap mb-3"></div>
+            <canvas id="investmentChart"></canvas>
+        </div>
+    </div>
+</div>
+
+<script>
+    let scenarios = [
+        { name: 'Real Estate', color: '#1565c0', bg: '#e3f2fd', rate: 12 },
+        { name: 'Market Average', color: '#2e7d32', bg: '#e8f5e9', rate: 8 },
+        { name: 'Cash', color: '#6a1b9a', bg: '#f3e5f5', rate: 2 }
+    ];
+
+    function updateTime() {
+        document.getElementById('timeHorizonValue').innerText = document.getElementById('timeHorizon').value;
+        calculateGrowth();
+    }
+
+    function updateRate(index, value) {
+        scenarios[index].rate = parseFloat(value);
+        document.getElementById(`rateLabel${index}`).innerText = `${value}%`;
+        calculateGrowth();
+    }
+
+    function addScenario() {
+        let index = scenarios.length;
+        let newScenario = { name: `Scenario ${index + 1}`, color: '#455a64', bg: '#eceff1', rate: 5 };
+        scenarios.push(newScenario);
+        renderScenarios();
+    }
+
+    function removeScenario(index) {
+        scenarios.splice(index, 1);
+        renderScenarios();
+    }
+
+    function editScenario(index) {
+        document.getElementById(`scenarioName${index}`).disabled = false;
+        document.getElementById(`editBtn${index}`).style.display = 'none';
+        document.getElementById(`saveBtn${index}`).style.display = 'inline-block';
+    }
+
+    function saveScenario(index) {
+        let newName = document.getElementById(`scenarioName${index}`).value;
+        scenarios[index].name = newName;
+        document.getElementById(`scenarioName${index}`).disabled = true;
+        document.getElementById(`editBtn${index}`).style.display = 'inline-block';
+        document.getElementById(`saveBtn${index}`).style.display = 'none';
+        calculateGrowth();
+    }
+
+    function formatNumber(input) {
+        let value = input.value.replace(/,/g, '');
+        if (!isNaN(value) && value !== '') {
+            input.value = parseFloat(value).toLocaleString();
+        }
+    }
+
+    function renderScenarios() {
+        let scenarioContainer = document.getElementById('scenarios');
+        let scenarioCards = document.getElementById('scenarioCards');
+        scenarioContainer.innerHTML = '';
+        scenarioCards.innerHTML = '';
+        
+        scenarios.forEach((scenario, index) => {
+            scenarioContainer.innerHTML += `
+                <div class="mb-4">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <i class="bi-solid bi-circle-fill me-2" style="color:${scenario.color};"></i><input type="text" id="scenarioName${index}" class="form-control read-only d-inline-block w- 50" value="${scenario.name}" disabled> 
+                    
+                    <button id="editBtn${index}" class="btn" onclick="editScenario(${index})"><i class="bi bi-pencil"></i></button>
+                    <button id="saveBtn${index}" class="btn btn-custom" onclick="saveScenario(${index})" style="display:none;">Save</button>
+                    <button class="btn" onclick="removeScenario(${index})"><i class="bi bi-trash"></i></button><br>
+                  </div>
+                    <label class="mt-2">Return Rate (<span id="rateLabel${index}">${scenario.rate}%</span>)</label>
+                    <input type="range" class="form-range" min="1" max="15" value="${scenario.rate}" oninput="updateRate(${index}, this.value)">  
+                </div>`;
+            
+            scenarioCards.innerHTML += `
+                <div class="col-md-4 pe-2 pb-2">
+                    <div class="card p-3" style="border-color: ${scenario.color}; background-color: ${scenario.bg}">
+                        <div class="card-body">
+                            <p class="card-title"><i class="fa-solid fa-circle"></i><i class="bi-solid bi-circle-fill" style="color:${scenario.color};"></i> ${scenario.name} (<span id="scenarioRate${index}">${scenario.rate}</span>%)</p>
+                            <p class="card-text">
+                              <span class="lead fw-bold" id="scenarioValue${index}"></span><br>
+                              <span class="card-text small text-muted">Total Growth: <strong id="growthPercentage${index}">%</strong></span>
+                            </p>
+                        </div>
+                    </div>
+                </div>`;
+        });
+        calculateGrowth();
+    }
+
+    function calculateGrowth() {
+        let initialInvestment = parseFloat(document.getElementById('initialInvestment').value.replace(/,/g, '')) || 0;
+        let annualContribution = parseFloat(document.getElementById('annualContribution').value.replace(/,/g, '')) || 0;
+        let years = parseInt(document.getElementById('timeHorizon').value);
+
+        let labels = [], datasetData = [];
+        
+        scenarios.forEach((scenario, index) => {
+            let data = [];
+            let value = initialInvestment;
+            let rate = scenario.rate / 100;
+            
+            for (let i = 0; i <= years; i++) {
+                if (index === 0) labels.push(i);
+                data.push(value);
+                value = value * (1 + rate) + annualContribution;
+            }
+            datasetData.push({ label: scenario.name, borderColor: scenario.color, data: data, fill: false });
+
+            let totalValue = Math.round(data[years]);
+            let totalGrowth = ((totalValue - initialInvestment) / initialInvestment) * 100;
+
+            document.getElementById(`scenarioValue${index}`).innerText = `$${totalValue.toLocaleString()}`;
+            document.getElementById(`growthPercentage${index}`).innerText = `${totalGrowth.toFixed(2)}%`;
+            document.getElementById(`scenarioRate${index}`).innerText = scenario.rate; // Updates rate in card
+        });
+
+        investmentChart.data.labels = labels;
+        investmentChart.data.datasets = datasetData;
+        investmentChart.update();
+    }
+
+    let ctx = document.getElementById('investmentChart').getContext('2d');
+    let investmentChart = new Chart(ctx, {
+        type: 'line',
+        data: { labels: [], datasets: [] },
+        options: { responsive: true, scales: { y: { beginAtZero: true } } }
+    });
+    
+    renderScenarios();
+</script>

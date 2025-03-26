@@ -3351,7 +3351,7 @@ textarea.form-control-lg {
   --bs-card-title-spacer-y: 0.5rem;
   --bs-card-border-width: 1px;
   --bs-card-border-color: var(--bs-border-color-translucent);
-  --bs-card-border-radius: 0px;
+  --bs-card-border-radius: 4px;
   --bs-card-box-shadow: ;
   --bs-card-inner-border-radius: -1px;
   --bs-card-cap-padding-y: 0.5rem;
@@ -10066,4 +10066,11 @@ img {
   display: flex;
   flex-direction: column;
   height: 100%;
+}
+
+.read-only {
+  padding: 0;
+  border: none;
+  background-color: #ffffff !important;
+  font-weight: 500;
 }

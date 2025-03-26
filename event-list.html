@@ -3,9 +3,12 @@ layout: tools
 title: Tax & Legal Deadlines
 description: Important Tax & Legal Dates so you can remember what deadlines are coming up.
 ---
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
     <div class="container">
       <div class="calendar-header">
         <a href="/event-calendar/" class="btn btn-outline-dark">Calendar View</a>
+        <button id="downloadPDF" class="btn btn-primary download-btn">Download as PDF</button>
       </div>
       <div class="event-list" id="eventList"></div>
     </div>
@@ -18,7 +21,6 @@ description: Important Tax & Legal Dates so you can remember what deadlines are 
                     <h5 class="modal-title" id="eventTitle"></h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
-                <div class="modal-body" id="eventDetails"></div>
             </div>
         </div>
     </div>
@@ -53,7 +55,7 @@ description: Important Tax & Legal Dates so you can remember what deadlines are 
                       <div class="ms-4 badge rounded-pill category-${event.category}">${event.category}</div>
                     </div>
                   `;
-                  eventItem.onclick = () => showEventDetails(event);
+                  // eventItem.onclick = () => showEventDetails(event);
                   eventList.appendChild(eventItem);
               });
           }
@@ -63,6 +65,49 @@ description: Important Tax & Legal Dates so you can remember what deadlines are 
               document.getElementById('eventDetails').textContent = event.details;
               new bootstrap.Modal(document.getElementById('eventModal')).show();
           }
+
+          document.getElementById('downloadPDF').addEventListener('click', () => {
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF({
+        orientation: "portrait",
+        unit: "pt",  // Use points for better spacing
+        format: "letter" // 8.5x11 inches
+    });
+
+    const margin = 40; // 0.5-inch margins
+    const pageWidth = doc.internal.pageSize.width - margin * 2; // Max text width
+    let yPosition = 60; // Start at 0.75 inches from the top
+
+    // Title
+    doc.setFont("helvetica", "normal");
+    doc.setFontSize(18);
+    doc.text("Tax & Legal Deadlines - Main Street Pulse", margin, yPosition);
+    yPosition += 25; // Space below title
+
+    // Website URL
+    doc.setFontSize(14);
+    doc.text("www.mainstreetpulse.com", margin, yPosition);
+    yPosition += 30; // Space below website
+
+    // Event List
+    doc.setFontSize(12);
+
+    events.forEach(event => {
+        if (yPosition > 720) { // Prevents overflow (leaves space for footer)
+            doc.addPage();
+            yPosition = 60; // Reset position on new page
+        }
+
+        // Format event title
+        doc.text(`${event.date} • ${event.title}`, margin, yPosition);
+        yPosition += 20; // Space between events
+    });
+
+    doc.save("Tax_Legal_Deadlines.pdf");
+});
+
+
+
 
           renderEventList();
       });
