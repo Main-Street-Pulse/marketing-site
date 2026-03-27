@@ -11,7 +11,7 @@ basic_settings:
   google_analytics: G-X42QB5MTMC
   location: "Salt Lake City, Utah"
   state: Utah
-  register: https://app.mainstreetpulse.com/register
+  register: /payment/
 
 font_settings:
   font_embed: "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Cormorant+Garamond:wght@400;500;600&display=swap" 
