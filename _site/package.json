@@ -1,0 +1,17 @@
+{
+  "name": "marketing-site",
+  "version": "1.0.0",
+  "description": "A simple but clean Bootstrap 5 HTML template from Templatedeck and modified by https://325studio.com.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "autoprefixer": "^10.4.27",
+    "postcss": "^8.5.8",
+    "tailwindcss": "^4.2.2"
+  }
+}

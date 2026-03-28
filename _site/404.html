@@ -41,7 +41,7 @@
     "name": "Main Street Pulse",
     "alternateName": "MSP",
     "description": "Main Street Pulse helps you keep track of all your business entities and properties in one convenient place. You can easily monitor your businesses, track your real estate holdings, and stay on top of important dates and milestones.",
-    "logo": "https://mainstreetpulse.com/assets/images/logo.png",
+    "logo": "https://mainstreetpulse.com/assets/images/",
     "sameAs": [
       "https://www.facebook.com/profile.php?id=61555991652828",
       "https://www.linkedin.com/company/main-street-pulse/"
@@ -93,25 +93,36 @@
   <div class="container">
     <a class="navbar-brand pe-4" href="http://localhost:4000">
       
-      <img src="http://localhost:4000/assets/images/logo.png" width="160" alt="Main Street Pulse">
+      <span class="ms-1">Main Street Pulse</span>
       
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         
           
             
               
             
-              <li class="nav-item">
-                <a class="nav-link active" href="http://localhost:4000">
-                  Home
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle " href="http://localhost:4000#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                About
                 </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  
+                    
+                      <li class="py-2">
+                        <a class="dropdown-item" href="http://localhost:4000/team/">
+                          Our Team
+                        </a>
+                      </li>
+                    
+                  
+                </ul>
               </li>
-            
+              
         
             
               
@@ -185,40 +196,47 @@
             
               
             
-              <li class="nav-item">
-                <a class="nav-link " href="http://localhost:4000/articles/">
-                  Articles
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle " href="http://localhost:4000#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Resources
                 </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  
+                    
+                      <li class="py-2">
+                        <a class="dropdown-item" href="http://localhost:4000/articles/">
+                          Articles
+                        </a>
+                      </li>
+                    
+                  
+                    
+                      <li class="py-2">
+                        <a class="dropdown-item" href="http://localhost:4000/testimonials/">
+                          Testimonials
+                        </a>
+                      </li>
+                    
+                  
+                    
+                      <li class="py-2">
+                        <a class="dropdown-item" href="http://localhost:4000/tools/">
+                          Tools
+                        </a>
+                      </li>
+                    
+                  
+                </ul>
               </li>
-            
-        
-            
               
-            
-              <li class="nav-item">
-                <a class="nav-link " href="http://localhost:4000/testimonials/">
-                  Testimonials
-                </a>
-              </li>
-            
-        
-            
-              
-            
-              <li class="nav-item">
-                <a class="nav-link " href="http://localhost:4000/tools/">
-                  Tools
-                </a>
-              </li>
-            
         
       </ul>
       <a href="https://app.mainstreetpulse.com/" target="_blank" rel="nofollow" data-splitbee-event="Log in" aria-label="Log in" class="btn btn-light px-3 py-2 me-2">
         Log in
       </a>
-      <a href="/payment/" data-splitbee-event="Sign up" aria-label="Sign up" class="btn btn-primary px-3 py-2">
+      <!-- <a href="/payment/" data-splitbee-event="Sign up" aria-label="Sign up" class="btn btn-primary px-3 py-2">
         Sign up
-      </a>
+      </a> -->
     </div>
   </div>
 </nav>
@@ -298,7 +316,7 @@
         <ul class="nav flex-column">
           
           <li class="nav-item">
-            <a href="" class="nav-link link-secondary ps-0">Home</a>
+            <a href="#" class="nav-link link-secondary ps-0">About</a>
           </li>
           
           <li class="nav-item">
@@ -306,15 +324,7 @@
           </li>
           
           <li class="nav-item">
-            <a href="/articles/" class="nav-link link-secondary ps-0">Articles</a>
-          </li>
-          
-          <li class="nav-item">
-            <a href="/testimonials/" class="nav-link link-secondary ps-0">Testimonials</a>
-          </li>
-          
-          <li class="nav-item">
-            <a href="/tools/" class="nav-link link-secondary ps-0">Tools</a>
+            <a href="#" class="nav-link link-secondary ps-0">Resources</a>
           </li>
           
           <li class="nav-item">
