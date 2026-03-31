@@ -27,16 +27,19 @@ layout: default
           <!-- Dashboard Preview with Hotspots (Bootstrap tooltips) -->
           <div class="position-relative" style="max-width: 500px; margin: 0 auto;">
             <img src="{{ site.url }}/assets/images/dashboard.png" alt="Dashboard Preview" class="img-fluid rounded shadow" style="width:100%; height:auto;">
+              <div class="mt-2 text-center">
+                <span class="badge bg-light text-dark rounded-pill">Version 2 coming soon</span>
+              </div>
             <!-- Hotspot: Portfolio Overview -->
-            <button type="button" class="btn btn-primary position-absolute p-0 rounded-circle" data-bs-toggle="tooltip" data-bs-placement="top" title="See a high-level summary of your net worth, total income, and property performance in real-time." style="left:22%; top:15%; width:32px; height:32px; transform:translate(-50%,-50%);">
+            <button type="button" class="btn btn-primary position-absolute p-0 rounded-circle" data-bs-toggle="tooltip" data-bs-placement="top" title="See a high-level summary of your net worth, total income, and property performance in real-time." style="left:20%; top:31%; width:32px; height:32px; transform:translate(-50%,-50%);">
               <i class="bi bi-info-circle"></i>
             </button>
             <!-- Hotspot: Planning Tools -->
-            <button type="button" class="btn btn-primary position-absolute p-0 rounded-circle" data-bs-toggle="tooltip" data-bs-placement="top" title="Plan your future with tools like net worth planning, property forecasting, and tax planning." style="left:6%; top:39%; width:32px; height:32px; transform:translate(-50%,-50%);">
+            <button type="button" class="btn btn-primary position-absolute p-0 rounded-circle" data-bs-toggle="tooltip" data-bs-placement="top" title="Plan your future with tools like net worth planning, property forecasting, and tax planning." style="left:38%; top:43%; width:32px; height:32px; transform:translate(-50%,-50%);">
               <i class="bi bi-info-circle"></i>
             </button>
             <!-- Hotspot: Reminders -->
-            <button type="button" class="btn btn-primary position-absolute p-0 rounded-circle" data-bs-toggle="tooltip" data-bs-placement="top" title="Reminders for important dates, deadlines, and events." style="left:79%; top:51%; width:32px; height:32px; transform:translate(-50%,-50%);">
+            <button type="button" class="btn btn-primary position-absolute p-0 rounded-circle" data-bs-toggle="tooltip" data-bs-placement="top" title="Reminders for important dates, deadlines, and events." style="left:20%; top:15%; width:32px; height:32px; transform:translate(-50%,-50%);">
               <i class="bi bi-info-circle"></i>
             </button>
             <!-- Hotspot: AI Powered Help -->
@@ -58,29 +61,8 @@ layout: default
     
   </div>
 </div>
-<section class="cta-main bg-primary bg-gradient text-light py-5 shadow-lg position-relative overflow-hidden">
-  <div class="container position-relative z-2">
-    <div class="row justify-content-center align-items-center">
-      <div class="col-lg-8 text-center">
-        <h1 class="display-4 fw-bold mb-3">Secure Your Early Access</h1>
-        <p class="lead mb-4">Be the first to experience the future of real estate organization. Join the Main Street Pulse waitlist today!</p>
-        <form name="waitlist" netlify class="row g-2 justify-content-center align-items-center">
-          <input type="hidden" name="form-name" value="waitlist" />
-          <div class="col-12 col-md-7 mb-2 mb-md-0">
-            <input type="email" name="email" class="form-control form-control-lg border-0 shadow-sm" placeholder="Enter your email address" required style="min-height:3rem;">
-          </div>
-          <div class="col-12 col-md-auto">
-            <button type="submit" class="btn btn-light btn-lg px-5 shadow-sm text-primary" style="min-height:3rem;">
-              Join Waitlist
-            </button>
-          </div>
-        </form>
-        <p class="text-light opacity-75 mt-3 mb-0 small">No spam, ever. Unsubscribe anytime.</p>
-      </div>
-    </div>
-  </div>
-  <div class="cta-bg-shape position-absolute top-0 start-0 w-100 h-100 z-1" style="pointer-events:none; opacity:0.15; background: radial-gradient(circle at 70% 30%, #fff 0%, #0d6efd 60%, #0d6efd 100%);"></div>
-</section>
+
+{% include waitlist.html %}
 
 <div class="py-vh-4 w-100 overflow-hidden bg-hero-custom text-dark">
   <div class="container">
@@ -129,7 +111,7 @@ layout: default
   </div>
 </div>
 
-<div class="py-vh-4 w-100 overflow-hidden bg-gray-100">
+<div class="py-vh-4 w-100 overflow-hidden bg-hero-custom">
   <div class="container">
     <div class="row d-flex justify-content-between align-items-center">
       <div class="col-lg-5 order-2">
@@ -168,7 +150,7 @@ layout: default
   </div>
 </div>
 
-<div class="py-vh-4 w-100 overflow-hidden bg-gray-100">
+<div class="py-vh-4 w-100 overflow-hidden bg-hero-custom">
   <div class="container">
     <div class="row d-flex justify-content-between align-items-center">
       <div class="col-lg-5 order-2">
@@ -185,7 +167,7 @@ layout: default
   </div>
 </div>
 
-{% include cta.html %}
+{% include waitlist.html %}
 
 <div class="py-vh-4 w-100 overflow-hidden">
   <div class="container">
@@ -200,5 +182,3 @@ layout: default
     </div>
   </div>
 </div>
-
-{% include security-cta.html %}

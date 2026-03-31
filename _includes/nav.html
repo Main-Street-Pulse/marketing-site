@@ -4,7 +4,7 @@
       {% if site.data.settings.basic_settings.logo %}
       <img src="{{ site.url }}/assets/images/{{ site.data.settings.basic_settings.logo }}" width="{{ site.data.settings.basic_settings.logo_width }}" alt="{{ site.data.settings.basic_settings.title }}">
       {% else %}
-      <span class="ms-1">{{ site.title }}</span>
+      <span class="ms-1 h4">{{ site.title }}</span> <strong class="font-bold">{{ site.title-sub }}</strong>
       {% endif %}
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

@@ -63,7 +63,7 @@
   --bs-border-style: solid;
   --bs-border-color: #dee2e6;
   --bs-border-color-translucent: rgba(21, 21, 21, 0.175);
-  --bs-border-radius: 0px;
+  --bs-border-radius: {{ site.btn-border-radius }};
   --bs-border-radius-sm: 0.25rem;
   --bs-border-radius-lg: 0.5rem;
   --bs-border-radius-xl: 1rem;
@@ -2851,7 +2851,7 @@ textarea.form-control-lg {
     width: auto; }
 
 .btn-group {
-  border-radius: 0px; }
+  border-radius: {{ site.btn-border-radius }}; }
   .btn-group > .btn:not(:first-child),
   .btn-group > .btn-group:not(:first-child) {
     margin-left: -1px; }
@@ -9097,6 +9097,9 @@ img {
 
 .bg-cta-custom {
   background: {{ site.data.settings.cta.bg }}; }
+
+.bg-hero-custom {
+  background: {{ site.data.settings.hero.bg }}; }
 
 .bg-form-custom {
   background-color: {{ site.data.settings.form.bg }};

@@ -1,6 +1,7 @@
 basic_settings:
   url: https://mainstreetpulse.com
-  title: Main Street Pulse
+  title: Main Street
+  title-sub: Pulse
   tagline: Your Ultimate Solution for Entity & Real Estate Tracking!
   description: Main Street Pulse helps you keep track of all your business entities and properties in one convenient place. You can easily monitor your businesses, track your real estate holdings, and stay on top of important dates and milestones.
   logo: 
@@ -33,7 +34,7 @@ cta:
   bg: "#00303c"
 
 hero:
-  bg: "rgb(247 246 242)"
+  bg: "#f7f6f2"
 
 # Background color for the form submission box 
 form: 
@@ -59,3 +60,5 @@ schema:
     addressCountry: "USA"
   # url: Same as url above
 # End Schema
+
+btn-border-radius: "16px"
