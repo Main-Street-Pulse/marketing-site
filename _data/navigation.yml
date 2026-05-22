@@ -1,10 +1,10 @@
 # - title: "Pricing"
 #   url: "#pricing"
-- title: "About"
-  url: "#"
-  sublinks:
-  - title: "Our Team"
-    url: "/team/"
+# - title: "About"
+#   url: "#"
+#   sublinks:
+#   - title: "Our Team"
+#     url: "/team/"
 - title: "Features"
   url: "#"
   sublinks:

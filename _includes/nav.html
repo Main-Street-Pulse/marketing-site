@@ -1,11 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
   <div class="container">
     <a class="navbar-brand pe-4" href="{{ site.url }}">
-      {% if site.data.settings.basic_settings.logo %}
-      <img src="{{ site.url }}/assets/images/{{ site.data.settings.basic_settings.logo }}" width="{{ site.data.settings.basic_settings.logo_width }}" alt="{{ site.data.settings.basic_settings.title }}">
-      {% else %}
-      <span class="ms-1 h4">{{ site.title }}</span> <strong class="font-bold">{{ site.title-sub }}</strong>
-      {% endif %}
+      {% include brand.html %}
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>

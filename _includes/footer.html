@@ -4,21 +4,12 @@
 
       <div class="col-12 col-lg-6 col-xl-4 border-end p-5">
 
-        <h3 class="h4 mb-3"><a href="{{ site.url }}" class="text-decoration-none">{{ site.data.settings.basic_settings.title }}</a></h3>
-        <ul class="list-inline">
-          {% for url in site.data.settings.social_settings %}
-          {% if url[1] != '' %}
-          <li class="list-inline-item">
-            <a href="{{ url[1] }}" target="_blank" class="h3" title="{{ url[0] | remove: '_url' | replace: '-', ' ' | capitalize }}">
-              <i class="bi bi-{{ url[0] | remove: '_url' }}" aria-hidden="true"></i>
-            </a>
-          </li>
+        <div class="d-flex flex-column lh-sm">
+          <span class="h3 mb-0 fw-bold">{{ site.data.settings.basic_settings.title }}</span>
+          {% if site.data.settings.basic_settings.title_byline %}
+          <span class="small opacity-75" style="font-size: 0.8rem;">{{ site.data.settings.basic_settings.title_byline }}</span>
           {% endif %}
-          {% endfor %}
-        </ul>
-        <a class="btn btn-dark btn-xl shadow me-1 my-1" href="{{ site.data.settings.basic_settings.register }}">
-          Sign up now
-        </a>
+        </div>
       </div>
 
       <div class="col-12 col-lg-6 col-xl-4 border-end p-5">
@@ -39,8 +30,20 @@
       </div>
 
       <div class="col-12 col-lg-6 col-xl-4 p-5">
-        <h3 class="h4 mb-3">Sign up to be notified of upcoming features</h3>
-        {% include form.html %}
+        <ul class="list-inline">
+          {% for url in site.data.settings.social_settings %}
+          {% if url[1] != '' %}
+          <li class="list-inline-item">
+            <a href="{{ url[1] }}" target="_blank" class="h3" title="{{ url[0] | remove: '_url' | replace: '-', ' ' | capitalize }}">
+              <i class="bi bi-{{ url[0] | remove: '_url' }}" aria-hidden="true"></i>
+            </a>
+          </li>
+          {% endif %}
+          {% endfor %}
+        </ul>
+        <a class="btn btn-dark btn-xl shadow me-1 my-1" href="{{ site.data.settings.basic_settings.register }}">
+          Sign up now
+        </a>
       </div>
     </div>
   </div>
