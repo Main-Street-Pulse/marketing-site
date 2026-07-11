@@ -1,9 +1,9 @@
 basic_settings:
   url: https://mainstreetpulse.com
-  title: Founder Suite
-  title_byline: By Main Street Pulse
+  title: MSP
+  title_byline: 
   tagline: Your Ultimate Solution for Entity & Real Estate Tracking!
-  description: Main Street Pulse helps you keep track of all your business entities and properties in one convenient place. You can easily monitor your businesses, track your real estate holdings, and stay on top of important dates and milestones.
+  description: MSP helps you keep track of all your business entities and properties in one convenient place. You can easily monitor your businesses, track your real estate holdings, and stay on top of important dates and milestones.
   logo: 
   logo_width: 160
   seo_image: main-street-pulse-banner.png
