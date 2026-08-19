@@ -1,9 +1,8 @@
-<footer>
+<footer class="hw-footer">
   <div class="container small border-top">
     <div class="row py-5 d-flex justify-content-between">
 
       <div class="col-12 col-lg-6 col-xl-4 border-end p-5">
-
         <div class="d-flex flex-column lh-sm">
           <span class="h3 mb-0 fw-bold">{{ site.data.settings.basic_settings.title }}</span>
           {% if site.data.settings.basic_settings.title_byline %}
@@ -17,15 +16,9 @@
         <ul class="nav flex-column">
           {% for item in site.data.navigation %}
           <li class="nav-item">
-            <a href="{{ item.url }}" class="nav-link link-secondary ps-0">{{ item.title }}</a>
+            <a href="{{ item.url }}" class="nav-link ps-0">{{ item.title }}</a>
           </li>
           {% endfor %}
-          <li class="nav-item">
-            <a href="/support/" class="nav-link link-secondary ps-0">Support</a>
-          </li>
-          <li class="nav-item">
-            <a href="/partner-resources/" class="nav-link link-secondary ps-0">Partner Resources</a>
-          </li>
         </ul>
       </div>
 
@@ -41,15 +34,15 @@
           {% endif %}
           {% endfor %}
         </ul>
-        <a class="btn btn-dark btn-xl shadow me-1 my-1" href="{{ site.data.settings.basic_settings.register }}">
-          Sign up now
+        <a class="hw-btn px-4 py-2 shadow-sm me-1 my-1" href="/#request-access">
+          Request access
         </a>
       </div>
     </div>
   </div>
 
   <div class="container text-center py-3 small">
-    © 2024 All Rights Reserved | <a href="{{ site.url }}" class="link-fancy">{{ site.data.settings.basic_settings.title}}</a> | <a class="link-fancy" href="/privacy-policy/">Privacy Policy</a> | <a class="link-fancy" href="/terms-of-service/">Terms of Service</a> | <a class="link-fancy" href="/sitemap.xml" target="_blank">Sitemap</a>
+    © 2026 All Rights Reserved | <a href="{{ site.url }}" class="link-fancy">{{ site.data.settings.basic_settings.title}}</a> | <a class="link-fancy" href="/privacy-policy/">Privacy Policy</a> | <a class="link-fancy" href="/terms-of-service/">Terms of Service</a>
   </div>
 
 </footer>
@@ -65,8 +58,8 @@
   </div>
 
 
-<script src="{{ site.url }}/js/bootstrap.bundle.min.js"></script>
-<script src="{{ site.url }}/js/aos.js"></script>
+<script src="/js/bootstrap.bundle.min.js"></script>
+<script src="/js/aos.js"></script>
 
 <script>
   document.addEventListener("DOMContentLoaded", function() {
@@ -93,7 +86,5 @@
 
     if (scrollpos >= header_height) { add_class_on_scroll() }
     else { remove_class_on_scroll() }
-
-    console.log(scrollpos)
   })
 </script>
